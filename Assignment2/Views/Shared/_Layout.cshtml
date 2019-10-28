@@ -1,0 +1,26 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <script src="~/javascript/tastyJS.js"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <a asp-action="Index" class="w3-bar-item w3-button">Tasty Recipes</a>
+            <div class="w3-right w3-hide-small">
+                <a asp-action="Index" class="w3-bar-item w3-button">About</a>
+                <a asp-action="List" class="w3-bar-item w3-button">Recipes</a>
+                <a asp-action="AddRecipe" class="w3-bar-item w3-button">Add Recipe</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

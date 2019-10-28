@@ -1,0 +1,45 @@
+﻿@model Recipe
+<div class="w3-col m6 w3-padding-large">
+    <h1 class="w3-center">@Model.Title</h1><br>
+    <h5 class="w3-center">by @Model.Name</h5>
+    <p class="w3-large">@Model.Description</p>
+</div>
+<hr />
+<div class="w3-row w3-padding-64">
+    <h1>Ingredients</h1>
+    <ul class="w3-ul" width="600">
+        @foreach (string ingr in Model.Ingredients.Split(';'))
+        {
+            <li class="w3-ul li">
+                @ingr,
+            </li>
+        }
+    </ul>
+</div>
+<hr />
+<div class="w3-row w3-padding-64">
+    <h1>Instructions</h1>
+    <ul class="w3-ul" width="600">
+        @if (Model.Instruction.Contains(';'))
+        {
+            @foreach (string instr in Model.Instruction.Split(';'))
+            {
+                <li class="w3-ul li">
+                    @instr
+                </li>
+            }
+        }
+        @if (!Model.Instruction.Contains(';'))
+        {
+            <li class="w3-ul li">
+                @Model.Instruction
+            </li>
+        }
+    </ul>
+</div>
+<hr />
+<h1>Reviews</h1>
+<div class="w3-card">
+    <p><span>Reviews are unavailable due to site construction.</span></p>
+    <p><a asp-action="LeaveReview" class="w3-button w3-light-grey w3-section">Leave Review</a></p>
+</div>

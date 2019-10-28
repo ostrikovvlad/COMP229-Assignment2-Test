@@ -1,0 +1,11 @@
+﻿@model Assignment2.Models.Recipe
+
+<div class="w3-content" style="max-width:1100px">
+    <div class="w3-container w3-padding-64" id="contact">
+        <h1>Post Your Recipe</h1><br>
+        <p>Willing to share your recipe through our community? That's wonderful! All you need to do is to fill in the form below. </p>
+        <p class="w3-text-blue-grey w3-large"><b>Some form guides:</b></p>
+        <p>Ingredients and Instructions field: you can devide ingredients and instructions by using ";" sign.</p>
+        @Html.Partial("RecipeForm", Model)
+    </div>
+</div>

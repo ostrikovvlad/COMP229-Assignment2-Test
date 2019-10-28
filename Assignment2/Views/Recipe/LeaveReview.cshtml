@@ -1,0 +1,11 @@
+﻿@model Assignment2.Models.Recipe
+
+<h2>Leave a review for:</h2>
+<h3><a asp-action="ViewRecipe">Potato perogies</a></h3>
+<form asp-action="LeaveReview" method="Post">
+    <div class="panel-body">
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Title" required name="Title"></p>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Comment" required name="Comment"</p>
+    </div>
+    <button type="submit" class="w3-button w3-light-grey w3-section">Save</button>
+</form>

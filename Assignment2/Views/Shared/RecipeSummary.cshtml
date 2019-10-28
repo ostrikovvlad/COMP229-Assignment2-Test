@@ -1,0 +1,9 @@
+﻿@model Recipe
+
+<form id="@Model.RecipeId" asp-action="ViewRecipe" asp-controller="Recipe" method="post">
+    <input type="hidden" asp-for="RecipeId" />
+    <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+    <h4>@Model.Title</h4>
+    <p class="w3-text-grey">@Model.Description.Split('.')[0]</p><br>
+    <button type="submit" class="w3-button w3-light-grey w3-section">See Details</button>
+</form>

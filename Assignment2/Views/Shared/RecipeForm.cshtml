@@ -1,0 +1,9 @@
+﻿@model Assignment2.Models.Recipe
+<form action="AddRecipe" method="Post">
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Title" required name="Title" asp-for="Title"></p>
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Author's name" required name="Name" asp-for="Name"></p>
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Description" required name="Description" asp-for="Description"></p>
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Ingredients" required name="Ingredients" asp-for="Ingredients"></p>
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Instructions" required name="Instruction" asp-for="Instruction"></p>
+    <p><button class="w3-button w3-light-grey w3-section" type="submit">POST RECIPE</button> <button class="w3-button w3-light-grey w3-section" type="button" onclick="onClickCancel()">CANCEL</button></p>
+</form>
